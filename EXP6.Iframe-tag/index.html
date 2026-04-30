@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple iFrames Example</title>
+</head>
+
+<body>
+
+    <h1>Example of Multiple iFrames with Attributes</h1>
+
+
+    <br><br>
+
+    <a href="https://www.wikipedia.org" target="wikiFrame">
+        Open Wikipedia Inside first Frame
+    </a>
+
+    <br><br>
+
+    <!-- first iframe -->
+    <h2>Wikipedia Website</h2>
+    <iframe id="wikiFrame" name="wikiFrame" src="https://www.wikipedia.org" width="100%" height="450" title="Wikipedia Website" loading="lazy" sandbox="allow-same-origin allow-scripts" importance="low" scrolling="yes" class="green-frame">
+    </iframe>
+
+    <br><br>
+
+    <!-- second iframe -->
+    <h2>YouTube Video</h2>
+    <iframe id="youtubeFrame" width="100%" height="500" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" scrolling="no" class="red-frame">
+    </iframe>
+
+    <br><br>
+
+    <!-- third iframe using srcdoc -->
+    <h2>Inline Content using srcdoc</h2>
+    <iframe id="inlineFrame1" width="100%" height="280" srcdoc="This content is inside iframe using srcdoc attribute. You can include <strong>HTML</strong> tags here!" title="Inline Frame" scrolling="auto" sandbox="allow-scripts allow-same-origin" class="purple-frame">
+    </iframe>
+    <br><br>
+    <iframe id="inlineFrame2" srcdoc="<h1>Hello</h1><p>This is inline content</p>" width="500" height="280" title="Inline Hello Content" scrolling="no" sandbox="allow-same-origin">
+    </iframe>
+
+</body>
+
+</html>
